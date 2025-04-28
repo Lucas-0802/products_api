@@ -9,9 +9,9 @@ Desenvolvido com **Nest & React**, este sistema permite que usuários realizem c
 
 🛠 **Backend:** Nest (API REST)  
 🎨 **Frontend:** React
- 🗄 **Banco de Dados:** PostgreSql  
 🐳 **Containers:** Docker & Docker Compose    
 💎 **UI:** Tailwind e Shadcn  
+ 🗄 **Banco de Dados:** PostgreSql  
 ✅ **Testes:** Jest  
 
 ---
