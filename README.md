@@ -32,13 +32,10 @@ docker compose up -d
 ### 3️⃣ Subir os Containers 🚢  
 Abra **http://localhost:5173** para visualizar a aplicação.  
 
-### 4️⃣ Acessar o Navegador  
-Abra **http://localhost:5173** para visualizar a aplicação.  
-
-### 5️⃣ Rodando os Testes ⚙️  
+### 4️⃣ Rodando os Testes ⚙️  
 ```bash
  npm run test
-```
+```  
 
 ---
 
