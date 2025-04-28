@@ -8,7 +8,8 @@ Desenvolvido com **Nest & React**, este sistema permite que usuários realizem c
 ## 📦 Tecnologias Utilizadas  
 
 🛠 **Backend:** Nest (API REST)  
-🎨 **Frontend:** React 
+🎨 **Frontend:** React
+
 🗄 **Banco de Dados:** PostgreSql  
 🐳 **Containers:** Docker & Docker Compose    
 💎 **UI:** Tailwind e Shadcn  
