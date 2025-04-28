@@ -1,4 +1,4 @@
-# 🌍 Products API ✈️  
+# Products API  
 **Sistema de gerenciamento de produtos**  
 
 Desenvolvido com **Nest & React**, este sistema permite que usuários realizem cadastro de produto, edição, listagem e deleção. 🚀  
