@@ -44,5 +44,14 @@ docker compose run --no-deps --rm backend npm run test
 
 ---
 
+**Pontos de melhoria futuros**
+
+Devido ao pouco tempo que tive para atuar nesse projeto, nem todos os pontos ficaram conforme eu desejava. Segue abaixo alguns pontos em que eu trabalharia para melhorar:
+ 1. Cobertura maior dos testes unitários
+ 2. Implementação de testes end 2 end
+ 3. Definição das imagens Docker para desenvolvimento e produção
+ 4. Paginação
+ 5. Mover as regras http para o controller 
+
 🎯 **Pronto! Agora você pode gerenciar produtos de forma prática e eficiente!**  
 🚀 **Contribua, sugira melhorias e ajude a evoluir o Product API!**
