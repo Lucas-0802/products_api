@@ -1,5 +1,3 @@
-version: '3.7'
-
 services:
   postgres:
     image: bitnami/postgresql:latest
@@ -11,28 +9,42 @@ services:
       - POSTGRES_DB=products_api
     volumes:
       - polls_pg_data:/bitnami/postgresql
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "docker" ]
+      interval: 1s
+      timeout: 1s
+      start_period: 20s
+      retries: 20
+
+  backend-migration:
+    build:
+      context: ./backend
+      target: migration
+    environment:
+      - DATABASE_URL=postgresql://docker:docker@postgres:5432/products_api
+    depends_on:
+      postgres:
+        condition: service_healthy
 
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      target: api
     ports:
       - "3000:3000"
     environment:
       - DATABASE_URL=postgresql://docker:docker@postgres:5432/products_api
     depends_on:
-      - postgres
-    command: sh -c "npx prisma generate && npx prisma migrate deploy && npm run seed && npm run start:dev"
-    volumes:
-      - ./backend:/app
+      backend-migration:
+        condition: service_completed_successfully
 
   frontend:
     build: ./frontend
     ports:
       - "5173:5173"
     depends_on:
-      - backend
-    volumes:
-      - ./frontend:/app
-    command: npm run dev
+      backend:
+        condition: service_started
 
 volumes:
   polls_pg_data:
